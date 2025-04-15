@@ -1,7 +1,6 @@
 import requests
 import re
-from bs4 import BeautifulSoup
-import time  # Import pro měření času
+import time
 
 providers = [
     # Each provider has: [URL, regex (or None if not needed), resolved IP (initially None), duration (initially None)]
@@ -21,9 +20,9 @@ providers = [
 def fetch_ip(provider):
     url, regex, _, _ = provider
     try:
-        start_time = time.time()  # Začátek měření času
+        start_time = time.time()
         response = requests.get(url)
-        duration = time.time() - start_time  # Konec měření času
+        duration = time.time() - start_time
         response.raise_for_status()  # Raise an error for HTTP codes 4xx/5xx
         if regex:
             # Use regex to extract IP from the response text

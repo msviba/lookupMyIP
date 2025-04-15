@@ -8,6 +8,10 @@ This Python script retrieves your public IP address from multiple online provide
 - Measures and displays the duration of each request.
 - Handles errors gracefully if a provider is unavailable or returns an invalid response.
 
+## Install
+
+`pip install requests`
+
 ## Usage
 Run the script directly using Python:
 ```bash
